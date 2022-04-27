@@ -1,14 +1,17 @@
 package com.sid.rest.webservice.consumers;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ConsumerController {
 
-    @RequestMapping(method = RequestMethod.GET, path = "/hello-world")
+    @GetMapping("/hello-world")
     public String helloWorld() {
      return "Hello World";
+    }
+
+    public HelloWorld helloWorldBean() {
+        return new HelloWorld();
     }
 }

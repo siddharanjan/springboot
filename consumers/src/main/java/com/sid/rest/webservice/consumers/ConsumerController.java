@@ -6,12 +6,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConsumerController {
 
-    @GetMapping("/hello-world")
+    @GetMapping(path = "/hello-world")
     public String helloWorld() {
      return "Hello World";
     }
 
+    @GetMapping(path="hello-world-bean")
     public HelloWorld helloWorldBean() {
-        return new HelloWorld();
+        return new HelloWorld("Hello world");
     }
 }

@@ -1,4 +1,4 @@
-package com.sid.rest.webservice.consumers;
+package com.sid.rest.webservice.consumers.helloworld;
 
 public class HelloWorld {
     private String message;
